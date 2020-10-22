@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block
+                name="webinar.items"
+                class="Magento\Framework\View\Element\Template"
+                after="-"
+                template="Webinar_Attributes::items.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Webinar\Attributes\ViewModel\Items</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

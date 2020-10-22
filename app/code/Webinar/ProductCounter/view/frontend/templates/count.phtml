@@ -1,0 +1,17 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+
+/** @var \Webinar\ProductCounter\ViewModel\Counter $counter */
+$counter = $block->getData('counter');
+$value = 0;
+if ($counter) {
+    $value = $counter->count();
+}
+
+if ($value <= 0) {
+    return;
+}
+?>
+<div class="productcounter-wrapper">
+    <span><?= /* @noEscape */ __('Number of products: %1', $value) ?></span>
+</div>

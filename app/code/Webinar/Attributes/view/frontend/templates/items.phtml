@@ -1,0 +1,8 @@
+<?php
+/** @var Magento\Framework\View\Element\Template $block */
+$viewModel = $block->getViewModel()?>
+<?php foreach ($viewModel->getItems() as $item):?>
+<div>
+    <b><?= $block->escapeHtml($item->getSku());?></b>: <i><?= $block->escapeHtml($item->getName());?></i>
+</div>
+<?php endforeach;?>

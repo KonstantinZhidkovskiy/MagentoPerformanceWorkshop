@@ -1,0 +1,29 @@
+<?php
+
+/** @var \Webinar\RemoteData\Block\Rank $block */
+
+$rank = $block->getRank();
+?>
+<h3><?= /* @noEscape */ __('Ranking of companies') ?></h3>
+<table>
+    <thead>
+    <tr>
+        <th><?= /* @noEscape */
+            __('Rank') ?></th>
+        <th><?= /* @noEscape */
+            __('Company') ?></th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($rank as $item): ?>
+        <tr>
+            <td>
+                <?= $block->escapeHtml($item->getRank()); ?>
+            </td>
+            <td>
+                <?= $block->escapeHtml($item->getCompany()); ?>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
